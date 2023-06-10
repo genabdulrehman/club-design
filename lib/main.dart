@@ -1,4 +1,5 @@
 import 'package:design/clubPage.dart';
+import 'package:design/room_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,8 +19,10 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Flutter Demo',
-            theme: ThemeData.dark(),
-            home: ClubDetailScreen(isUser: true),
+            theme: ThemeData(
+                bottomSheetTheme: BottomSheetThemeData(
+                    backgroundColor: Colors.black.withOpacity(0))),
+            home: RoomPage(),
             // onGenerateRoute: CustomRouter.allRoutes,
             // initialRoute: splashScreenRoute,
             // f
